@@ -39,8 +39,3 @@
 
 # debug information files
 *.dwo
-
-# vim files
-*.swp
-*.swo
-*.un
