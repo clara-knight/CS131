@@ -23,7 +23,7 @@ uint64_t extract_trials_sum(const __m256i);
 
 int main(int argc, char *argv[]) {
   double p = std::stof(argv[1]);
-  uint64_t n = 0xFFFFFF;
+  uint64_t n = 0xFFFFFFF;
   __m256d p_v = _mm256_set1_pd(p);
 
   std::random_device rd;

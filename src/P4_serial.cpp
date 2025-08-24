@@ -9,7 +9,7 @@ uint64_t b_trial(float p, float random_float) { return p > random_float; }
 int main(int argc, char *argv[]) {
   // Probability p from command line. Trials.
   double p = std::stof(argv[1]);
-  uint64_t n = 0xFFFFFF;
+  uint64_t n = 0xFFFFFFF;
 
   std::random_device rd;
   std::mt19937_64 m_rng(rd());

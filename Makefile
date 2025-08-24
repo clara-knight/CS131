@@ -1,5 +1,5 @@
 CXX = g++
-CXXFLAGS = -std=c++20 -mavx2
+CXXFLAGS = -std=c++20 -mavx2 -O2
 SRC_DIR = src
 BIN_DIR = bin
 
