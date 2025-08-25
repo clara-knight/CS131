@@ -9,7 +9,7 @@ uint64_t b_trial(float p, float random_float) { return p > random_float; }
 int main(int argc, char *argv[]) {
   // Probability p from command line. Trials.
   double p = std::stof(argv[1]);
-  uint64_t n = 0xFFFFFFF;
+  uint64_t n = 0xFFFFFF;
 
   std::random_device rd;
   std::mt19937_64 m_rng(rd());
@@ -22,7 +22,9 @@ int main(int argc, char *argv[]) {
     trials_sum += b_trial(p, random_float);
   }
 
-  std::cout << std::format("Observed p = {}",
-                           trials_sum / static_cast<float>(n * 4));
+  double observed_p = trials_sum / static_cast<float>(n * 4);
+  std::cout << std::format("Observed p = {:.7f}\n.", observed_p);
+  std::cout << std::format("{0}p = {1:.7f}.\n", "Δ", p - observed_p);
+
   return 0;
 }
